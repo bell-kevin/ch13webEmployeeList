@@ -9,6 +9,11 @@ using namespace std;
 class ColorCodedStream : public fstream
 {
 public:
+	void displayMyInfo(void) {
+		*this << "<h1>Combined Employee List</h1>" << endl;
+		*this << "<h2>By Kevin Bell</h2>" << endl;
+		*this << "<h3>Black = Region 1, Blue = Region 2, Green = Region 3</h3>" << endl;
+	}
 	void writeInColor(string str, string aColor)
 	{
 		//doctype statement, the opening and closing html tag, the head tag and its contents, and the body tag and its contents
@@ -30,6 +35,7 @@ void openFile(fstream& file, string descr); //prototype
 
 int main()
 {
+	//declare variables
 	ColorCodedStream outputFile;
 	fstream blackFile, blueFile, greenFile;
 	openFile(blackFile, "black");
@@ -37,6 +43,9 @@ int main()
 	openFile(greenFile, "green");
 	openFile(outputFile, "output");
 
+	//display my info
+	outputFile.displayMyInfo();
+	
 	string blackInput, blueInput, greenInput;
 	// read the first line from each file
 	getline(blackFile, blackInput);
@@ -136,7 +145,7 @@ int main()
 }
 //********************************************************************
 // Opens a specified file for reading or writing. The descr argument *
-// is used in prompting the user for the file name.		     *
+// is used in prompting the user for the file name.					 *
 //********************************************************************
 void openFile(fstream &file, string descr)
 {
