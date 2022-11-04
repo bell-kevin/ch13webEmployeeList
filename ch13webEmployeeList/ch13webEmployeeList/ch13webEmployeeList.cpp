@@ -126,21 +126,14 @@ int main()
 			outputFile.writeInColor(greenInput, "green");
 			getline(greenFile, greenInput);
 		}
-		/*
-		if (blackFile && !blueFile)
-		{
-			//Only blackFile has fresh data
-			outputFile.writeInColor(blackInput, "black");
-			getline(blackFile, blackInput);
-		}
-		if (blueFile && !blackFile)
-		{
-			//Only blueFile has fresh data
-			outputFile.writeInColor(blueInput, "blue");
-			getline(blueFile, blueInput);
-		}
-		*/
-	}
+	} //end while loop
+	
+	blackFile.close();
+	blueFile.close();
+	greenFile.close();
+	outputFile.close();
+	
+	system("pause");
 	return 0;
 }
 //********************************************************************
@@ -163,4 +156,4 @@ void openFile(fstream &file, string descr)
 		cout << "Error opening " << fileName << endl;
 		exit(1);
 	}
-}
+} //end openFile function
