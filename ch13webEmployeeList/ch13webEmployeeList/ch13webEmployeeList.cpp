@@ -23,8 +23,6 @@ public:
 		*this << "</span>\n";
 		*this << "</body>" << endl;
 		*this << "</html>" << endl;
-		
-		
 	}
 };
 
