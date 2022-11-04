@@ -8,7 +8,7 @@ The project in the book merges two text files, the black fileDownload black file
 
 This is how the HTML page will appear in a web browser:
 
-Ch 13 HTML page
+![Ch 13 HTML page](https://github.com/bell-kevin/ch13webEmployeeList/blob/main/saveMeNowPleaseAndThankYou.PNG)
 
 The content at the top is different from the book project; be sure to include that information in your project. For the list, use a single paragraph tag with break tags after each name.
 
