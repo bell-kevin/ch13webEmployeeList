@@ -136,7 +136,7 @@ int main()
 }
 //********************************************************************
 // Opens a specified file for reading or writing. The descr argument *
-// is used in prompting the user for the file name.					 *
+// is used in prompting the user for the file name.		     *
 //********************************************************************
 void openFile(fstream &file, string descr)
 {
